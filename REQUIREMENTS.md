@@ -1,1 +1,1 @@
-Se necesita hacer el trabajo de GitHub.
+Se necesita hacer una mejora en el trabajo de GitHub con el issue.
