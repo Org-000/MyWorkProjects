@@ -1,20 +1,29 @@
-name: Subir a GitHub Pages
+name: Flujo de Trabajo CI/CD
 
 on:
-  push: # Lo hace en cada push
+  push: # Al hacer push se activa
     branches:
-      - main # Mi rama usada
+      - main # En mi rama
+  pull_request: # Al hacer pull request se activa 
+    branches:
+      - main # En mi rama
 
 jobs:
-  deploy:
-    runs-on: ubuntu-latest # Maquina virtual de GitHub a usar
-
+  test:
+    runs-on: ubuntu-latest # Maquina virtual que usara GitHub Actions
+    if: github.event_name == 'pull_request' # Si se hace un pull request se haran los pasos
     steps:
-      - name: Checkout code # Nombre de un paso
-        uses: actions/checkout@v3 # Comprueba y descarga mi código
+      - uses: actions/checkout@v3 # Lee mi codigo
+      - name: Validar HTML # Nombre del paso
+        uses: Cyb3r-Jak3/html5validator-action@v1 # Revisa que mi HTML siga las reglas del HTML5
 
-      - name: Deploy to GitHub Pages # Nombre de otro paso
-        uses: peaceiris/actions-gh-pages@v3 # Sube mi sitio a GitHub Pages
+  deploy:
+    runs-on: ubuntu-latest # Maquina virtual que usara GitHub Actions
+    if: github.event_name == 'push' # Si se hace un push se haran los pasos
+    steps:
+      - uses: actions/checkout@v3 # Lee mi codigo
+      - name: Deploy to GitHub Pages # Nombre del paso
+        uses: peaceiris/actions-gh-pages@v3 # Sube mi archivo a GitHub Pages automaticamente
         with:
-          github_token: ${{ secrets.GH_PAT }} # Token identificador mio
-          publish_dir: ./  # Donde está mi index.html
+          github_token: ${{ secrets.GITHUB_TOKEN }} # Un secreto identificador mio para acceso
+          publish_dir: ./ # Usa mi index.hmtl para publicarlo a GitHub Pages 
