@@ -1,0 +1,20 @@
+name: Subir a GitHub Pages
+
+on:
+  push: # Lo hace en cada push
+    branches:
+      - main # Mi rama usada
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest # Maquina virtual de GitHub a usar
+
+    steps:
+      - name: Checkout code # Nombre de un paso
+        uses: actions/checkout@v3 # Comprueba y descarga mi código
+
+      - name: Deploy to GitHub Pages # Nombre de otro paso
+        uses: peaceiris/actions-gh-pages@v3 # Sube mi sitio a GitHub Pages
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }} # Token identificador mio
+          publish_dir: ./  # Donde está mi index.html
