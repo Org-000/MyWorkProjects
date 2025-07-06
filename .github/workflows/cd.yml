@@ -16,5 +16,5 @@ jobs:
       - name: Deploy to GitHub Pages # Nombre de otro paso
         uses: peaceiris/actions-gh-pages@v3 # Sube mi sitio a GitHub Pages
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }} # Token identificador mio
+          github_token: ${{ secrets.GH_PAT }} # Token identificador mio
           publish_dir: ./  # Donde está mi index.html
