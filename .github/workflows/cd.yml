@@ -25,5 +25,5 @@ jobs:
       - name: Deploy to GitHub Pages # Nombre del paso
         uses: peaceiris/actions-gh-pages@v3 # Sube mi archivo a GitHub Pages automaticamente
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }} # Un secreto identificador mio para acceso
+          github_token: ${{ secrets.GH_PAT }} # Un secreto identificador mio para acceso
           publish_dir: ./ # Usa mi index.hmtl para publicarlo a GitHub Pages 
