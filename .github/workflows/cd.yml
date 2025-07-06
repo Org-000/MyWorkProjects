@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3 # Lee mi codigo
       - name: Validar HTML # Nombre del paso
-        uses: Cyb3r-Jak3/html5validator-action@v1 # Revisa que mi HTML siga las reglas del HTML5
+        uses: Cyb3r-Jak3/html5validator-action@v7.2.0 # Revisa que mi HTML siga las reglas del HTML5
 
   deploy:
     runs-on: ubuntu-latest # Maquina virtual que usara GitHub Actions
@@ -23,7 +23,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3 # Lee mi codigo
       - name: Deploy to GitHub Pages # Nombre del paso
-        uses: peaceiris/actions-gh-pages@v3 # Sube mi archivo a GitHub Pages automaticamente
+        uses: peaceiris/actions-gh-pages@v4 # Sube mi archivo a GitHub Pages automaticamente
         with:
           github_token: ${{ secrets.GH_PAT }} # Un secreto identificador mio para acceso
           publish_dir: ./ # Usa mi index.hmtl para publicarlo a GitHub Pages 
