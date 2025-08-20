@@ -1,0 +1,29 @@
+name: Flujo de Trabajo CI/CD
+
+on:
+  push: # Al hacer push se activa
+    branches:
+      - main # En mi rama
+  pull_request: # Al hacer pull request se activa 
+    branches:
+      - main # En mi rama
+
+jobs:
+  test:
+    runs-on: ubuntu-latest # Maquina virtual que usara GitHub Actions
+    if: github.event_name == 'pull_request' # Si se hace un pull request se haran los pasos
+    steps:
+      - uses: actions/checkout@v3 # Lee mi codigo
+      - name: Validar HTML # Nombre del paso
+        uses: Cyb3r-Jak3/html5validator-action@v7.2.0 # Revisa que mi HTML siga las reglas del HTML5
+
+  deploy:
+    runs-on: ubuntu-latest # Maquina virtual que usara GitHub Actions
+    if: github.event_name == 'push' # Si se hace un push se haran los pasos
+    steps:
+      - uses: actions/checkout@v3 # Lee mi codigo
+      - name: Deploy to GitHub Pages # Nombre del paso
+        uses: peaceiris/actions-gh-pages@v4 # Sube mi archivo a GitHub Pages automaticamente
+        with:
+          github_token: ${{ secrets.GH_PAT }} # Un secreto identificador mio para acceso
+          publish_dir: ./ # Usa mi index.hmtl para publicarlo a GitHub Pages 
