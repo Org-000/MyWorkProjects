@@ -3,7 +3,8 @@ body {
 }
 
 p,
-h2 {
+h2,
+h3 {
   color: rgb(77, 238, 234);
 }
 
@@ -41,28 +42,34 @@ hr {
 }
 
 .video {
-  padding-top: 50px;
-  padding-bottom: 25px;
-  display: block;
+  display: flex;
+  border: 2px solid rgb(77, 238, 234);
+  border-radius: 16px;
   margin: auto;
+  margin-top: 25px;
 }
 
-.mapa_boleteria,
-.titulo_boleteria {
-  display: grid;
-  grid-template-columns: repeat(2, 40%);
-  gap: 150px;
+.boleteria {
+  margin: auto;
+  width: 50%;
+}
+
+.mapa_boleteria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: auto;
   padding-left: 50px;
 }
 
 .formulario {
   color: rgb(77, 238, 234);
-  margin-left: 50px;
-  margin-bottom: 25px;
-}
-
-.boleteria {
-  width: 70%;
+  text-align: center;
+  margin: auto;
+  padding-bottom: 25px;
+  width: 60%;
+  border: 2px solid rgb(77, 238, 234);
+  border-radius: 16px;
 }
 
 .titulo_informacion {
@@ -88,7 +95,11 @@ hr {
   border-radius: 16px;
 }
 
-.panel_inferior {
-  color: rgb(77, 238, 234);
-  margin-left: 50px;
+.panel_inferior,
+.text {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin: auto;
+  padding-left: 50px;
 }

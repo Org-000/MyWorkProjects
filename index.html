@@ -44,23 +44,21 @@
       ></iframe>
     </div>
     <hr />
-    <div class="titulo_boleteria">
-      <h2>Ubicación 📍</h2>
-      <h2>Precios boleteria 🎫</h3>
-    </div>
-      <div class="mapa_boleteria">
+    <div class="mapa_boleteria">
       <div>
+        <h2 class="titulo_boleteria">Ubicación 📍</h2>
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20046.504749452462!2d4.352632177427327!3d51.093456793519266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3ee18dda1c861%3A0xdf44d9e8197edc74!2s2850%20Boom%2C%20B%C3%A9lgica!5e0!3m2!1ses-419!2sco!4v1755616601465!5m2!1ses-419!2sco"
-          width="600"
-          height="450"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20046.504749452462!2d4.352632177427327!3d51.093456793519266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3ee18dda1c861%3A0xdf44d9e8197edc74!2s2850%20Boom%2C%20B%C3%A9lgica!5e0!3m2!1ses-419!2sco!4v1755616601465!5m2!1ses-419!2sco"
+        width="600"
+        height="450"
+        style="border: 2px solid rgb(77, 238, 234); border-radius: 16px;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
       <div class="boleteria">
+        <h2 class="titulo_boleteria">Precios boleteria 🎫</h3>
         <p>
           Selecciona tu entrada y asegura tu acceso a la experiencia mágica de
           Tomorrowland. Cada ticket incluye acreditación digital y acceso a
@@ -85,22 +83,23 @@
         </table>
       </div>
     </div>
+    <hr>
     <div class="formulario">
       <h2>Formulario de inscripción</h2>
       <p>Para inscribirse por favor llene estos campos.</p>
       <label for="nombre">Nombre:</label>
-      <input type="text" name="" id="nombre" required><br>
+      <input type="text" name="" id="nombre" required><br><br>
       <label for="edad">Edad:</label>
-      <input type="number" name="" id="edad" required min="18"><br>
+      <input type="number" name="" id="edad" required min="18"><br><br>
       <label for="telefono">Telefono:</label>
-      <input type="tel" name="" id="telefono" required><br>
+      <input type="tel" name="" id="telefono" required><br><br>
       <label for="correo">Correo:</label>
-      <input type="email" name="" id="correo" required><br>
+      <input type="email" name="" id="correo" required><br><br>
       <h3>Tipo de boleta:</h3>
       <label for="vip">VIP:</label>
-      <input type="radio" name="boleta" id="vip" />
+      <input type="radio" name="boleta" id="vip" /><br>
       <label for="normal">Normal:</label>
-      <input type="radio" name="boleta" id="normal" />
+      <input type="radio" name="boleta" id="normal" /><br>
       <label for="basica">Basica:</label>
       <input type="radio" name="boleta" id="basica"/><br>
 
@@ -120,8 +119,9 @@
         <p>Ciudad: Boom, Bélgica</p>
         <p>Email: <a href="mailto:contacto@tomorrowland.com">contacto@tomorrowland.com</a></p>
         <p>Tel: <a href="tel:32123456789">+32 123 456 789</a></p>
+        <p>© 2025 Tomorrowland. Todos los derechos reservados.</p>
     </div>
-    <div class="panel_inferior_links"">
+    <div class="panel_inferior_links">
       <h3>Síguenos</h3>
       <p>
         <a href="https://instagram.com/tomorrowland" target="_blank" style="color:#fff; margin-right:10px;">Instagram</a> |
@@ -130,8 +130,5 @@
       </p>
     </div>
   </div>
-  <p class="panel_inferior">
-    © 2025 Tomorrowland. Todos los derechos reservados.
-  </p>
   </body>
 </html>
