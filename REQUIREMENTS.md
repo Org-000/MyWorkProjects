@@ -1,1 +1,0 @@
-Se necesita hacer una mejora en el trabajo de GitHub con el issue.

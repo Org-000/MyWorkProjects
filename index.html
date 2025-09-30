@@ -1,134 +1,292 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Festival Tomorrowland</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>El Café Grano Urbano</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/icons/logo-cafe-100.png"
+      type="image/x-icon" />
   </head>
   <body>
-    <h1 class="titulo">Tomorrowland</h1>
-    <hr />
-    <section>
-      <img src="images/70a40815-ee05-4575-8269-31562e3e2158.jpg" alt="festival" />
-      <img src="images/2881.jpg" alt="festival" />
-      <img src="images/ed35ccd4-f7a1-4a79-a044-12c917242306.jpg" alt="festival" />
-      <img src="images/40161.jpg" alt="festival" />
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="#">
+            <img src="assets/icons/logo-cafe-50.png" alt="Café Grano Urbano" />
+            <p>El Café Grano Urbano</p>
+          </a>
+        </div>
+        <ul class="navbar-links">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <button type="button" class="boton-navbar"></button>
+      </nav>
+    </header>
+
+    <section class="inicio">
+      <div class="contenedor-imagen-inicio">
+        <h1>Descubre el sabor de Café Grano Urbano</h1>
+        <p>Café de alta calidad, buenas ofertas y con reservas en línea.</p>
+        <a href="#cafes" class="boton-inicio">Ver cafés</a>
+        <a href="#postres" class="boton-inicio">Ver postres</a>
+      </div>
     </section>
-    <hr />
-    <div>
-      <h3 class="titulo_informacion">Información del evento</h3>
-      <p class="text_info">
-        Bienvenido/a al formulario oficial de inscripción para la Feria
-        Tomorrowland. Este espacio está diseñado para recopilar tu información
-        de manera clara y segura, con el fin de garantizar tu acceso a las
-        diferentes experiencias del evento. Por favor, completa cada sección con
-        datos verídicos, ya que serán verificados antes de la entrega de tu
-        acreditación. Recuerda que tu participación no solo asegura tu ingreso a
-        las zonas de exposición, sino también a actividades exclusivas, talleres
-        interactivos y presentaciones especiales que forman parte de la magia de
-        Tomorrowland.
-      </p>
-    </div>
-    <div>
-      <iframe
-        class="video"
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/UX38PTCabzM?si=NRVHtGq8LGD6JhaS"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-      ></iframe>
-    </div>
-    <hr />
-    <div class="mapa_boleteria">
-      <div>
-        <h2>Ubicación 📍</h2>
-        <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20046.504749452462!2d4.352632177427327!3d51.093456793519266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3ee18dda1c861%3A0xdf44d9e8197edc74!2s2850%20Boom%2C%20B%C3%A9lgica!5e0!3m2!1ses-419!2sco!4v1755616601465!5m2!1ses-419!2sco"
-        width="600"
-        height="450"
-        style="border: 2px solid rgb(77, 238, 234); border-radius: 16px;"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </div>
-      <div class="boleteria">
-        <h2>Precios boleteria 🎫</h3>
-        <p>
-          Selecciona tu entrada y asegura tu acceso a la experiencia mágica de
-          Tomorrowland. Cada ticket incluye acreditación digital y acceso a
-          zonas especiales según la categoría.
-        </p>
-        <table border="2">
-          <tr>
-            <th>Tipo de boleta</th>
-            <th>Precio</th>
-          </tr>
-          <tr>
-            <td>VIP</td>
-            <td>1000 Pesos</td>
-          <tr>
-            <td>Normal</td>
-            <td>500 Pesos</td>
-          </tr>
-          <tr>
-            <td>Basica</td>
-            <td>250 Pesos</td>
-          </tr>
-        </table>
-      </div>
-    </div>
-    <br>
-    <div class="formulario">
-      <h2>Formulario de inscripción</h2>
-      <p>Para inscribirse por favor llene estos campos.</p>
-      <label for="nombre">Nombre:</label><br>
-      <input type="text" name="" id="nombre" required><br><br>
-      <label for="edad">Edad:</label><br>
-      <input type="number" name="" id="edad" required min="18"><br><br>
-      <label for="telefono">Telefono:</label><br>
-      <input type="tel" name="" id="telefono" required><br><br>
-      <label for="correo">Correo:</label><br>
-      <input type="email" name="" id="correo" required><br><br>
-      <h3>Tipo de boleta:</h3>
-      <label for="vip">VIP:</label>
-      <input type="radio" name="boleta" id="vip" /><br>
-      <label for="normal">Normal:</label>
-      <input type="radio" name="boleta" id="normal" /><br>
-      <label for="basica">Basica:</label>
-      <input type="radio" name="boleta" id="basica"/><br>
 
-      <p>*La compra de entradas es personal e intransferible. Edad mínima: 18 años. No hay devoluciones.</p>
+    <section id="servicios" class="servicios">
+      <h2>Nuestros Servicios</h2>
+      <div class="contenedor-servicios">
+        <article class="servicio">
+          <img src="assets/icons/package.png" alt="Domicilio" />
+          <h3>Entregas a domicilio</h3>
+          <p>
+            Recibe tus bebidas y postres favoritos en la puerta de tu casa con
+            nuestro servicio rápido y seguro.
+          </p>
+        </article>
+        <article class="servicio">
+          <img src="assets/icons/discount.png" alt="Promociones" />
+          <h3>Promociones</h3>
+          <p>Aprovecha descuentos exclusivos y combos especiales.</p>
+        </article>
+        <article class="servicio">
+          <img src="assets/icons/calendar.png" alt="Reservas" />
+          <h3>Reservas en línea</h3>
+          <p>Reserva tu mesa desde cualquier dispositivo en segundos.</p>
+        </article>
+      </div>
+    </section>
 
-      <button type="submit" onclick="pago()">Inscribirse</button>
-      <script>
-        function pago() {
-          alert("Aqui se pediria el pago.")
-        }
-      </script>
-    </div>
-    <hr>
-  <div class="panel_inferior">
-    <div class="panel_inferior_contacto">
-        <h3>Tomorrowland Feria 2025</h3>
-        <p>Ciudad: Boom, Bélgica</p>
-        <p>Email: <a href="mailto:contacto@tomorrowland.com">contacto@tomorrowland.com</a></p>
-        <p>Tel: <a href="tel:32123456789">+32 123 456 789</a></p>
-        <p>© 2025 Tomorrowland. Todos los derechos reservados.</p>
-    </div>
-    <div class="panel_inferior_links">
-      <h3>Síguenos</h3>
-      <p>
-        <a href="https://instagram.com/tomorrowland" target="_blank" style="color:#fff; margin-right:10px;">Instagram</a> |
-        <a href="https://facebook.com/tomorrowland" target="_blank" style="color:#fff; margin-right:10px;">Facebook</a> |
-        <a href="https://twitter.com/tomorrowland" target="_blank" style="color:#fff;">X</a>
-      </p>
-    </div>
-  </div>
+    <section id="productos" class="productos">
+      <h2>Nuestros catalogo</h2>
+      <ul>
+        <li>
+          <h3 id="cafes">Cafés</h3>
+          <ul>
+            <li>
+              <div class="precio">
+                ● Espresso
+                <p>Pequeño: $2.00</p>
+                <p>Grande: $3.00</p>
+              </div>
+              <a href="#contacto">
+                <button type="button">Comprar</button>
+              </a>
+            </li>
+            <li>
+              <div class="precio">
+                ● Cappuccino
+                <p>Pequeño: $3.50</p>
+                <p>Grande: $4.50</p>
+              </div>
+              <a href="#contacto">
+                <button type="button">Comprar</button>
+              </a>
+            </li>
+            <li>
+              <div class="precio">
+                ● Latte
+                <p>Pequeño: $3.00</p>
+                <p>Grande: $4.00</p>
+              </div>
+              <a href="#contacto">
+                <button type="button">Comprar</button>
+              </a>
+            </li>
+            <li>
+              <div class="precio">
+                ● Frappe
+                <p>Vaso único: $4.50</p>
+              </div>
+              <a href="#contacto">
+                <button type="button">Comprar</button>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h3 id="postres">Postres</h3>
+          <ul>
+            <li>
+              <div class="precio">
+                ● Cheesecake
+                <p>Porción: $3.50</p>
+              </div>
+              <a href="#contacto">
+                <button type="button">Comprar</button>
+              </a>
+            </li>
+            <li>
+              <div class="precio">
+                ● Brownie
+                <p>Porción: $2.50</p>
+              </div>
+              <a href="#contacto">
+                <button type="button">Comprar</button>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section id="galeria" class="galeria">
+      <h2>Un vistazo a la experiencia</h2>
+      <div class="contenedor-galeria">
+        <img src="assets/img/cafe-postre.jpg" alt="Café 1" />
+        <img src="assets/img/cafe-cuaderno.jpg" alt="Café 2" />
+        <img src="assets/img/cafe-decorativo.jpg" alt="Café 3" />
+        <img src="assets/img/cafe-fondo.jpg" alt="Café 4" />
+        <img src="assets/img/cafe-servido.jpg" alt="Café 5" />
+        <img src="assets/img/cafe-sirviendo.jpg" alt="Café 6" />
+      </div>
+    </section>
+
+    <section id="contacto" class="contacto">
+      <h2>Haz tu pedido</h2>
+      <form class="formulario-contacto">
+        <div class="formulario">
+          <label for="nombre">Nombre*</label>
+          <input type="text" id="nombre" placeholder="Tu nombre" required />
+        </div>
+        <div class="formulario">
+          <label for="email">Correo*</label>
+          <input type="email" id="email" placeholder="tu@correo.com" required />
+        </div>
+        <div class="formulario">
+          <label for="direccion">Dirección</label>
+          <input
+            type="text"
+            id="direccion"
+            placeholder="Tu dirección del domicilio" />
+        </div>
+        <div class="formulario-radio">
+          <p>Asunto*</p>
+          <div>
+            <label>
+              <input type="radio" name="asunto" value="reserva" required />
+              Reserva
+            </label>
+
+            <label>
+              <input type="radio" name="asunto" value="domicilio" />
+              Domicilio
+            </label>
+
+            <label>
+              <input type="radio" name="asunto" value="otro" />
+              Otro
+            </label>
+          </div>
+        </div>
+        <div class="formulario-radio">
+          <p>Producto</p>
+          <div>
+            <label>
+              <input type="checkbox" name="productos" value="espresso" />
+              Espresso
+            </label>
+
+            <label>
+              <input type="checkbox" name="productos" value="cappuccino" />
+              Cappuccino
+            </label>
+
+            <label>
+              <input type="checkbox" name="productos" value="latte" />
+              Latte
+            </label>
+
+            <label>
+              <input type="checkbox" name="productos" value="frappe" />
+              Frappe
+            </label>
+
+            <label>
+              <input type="checkbox" name="productos" value="cheesecake" />
+              Cheesecake
+            </label>
+
+            <label>
+              <input type="checkbox" name="productos" value="brownie" />
+              Brownie
+            </label>
+          </div>
+        </div>
+        <div class="formulario">
+          <label for="mensaje">Mensaje*</label>
+          <textarea
+            id="mensaje"
+            rows="5"
+            placeholder="Escribe tu mensaje..."
+            required></textarea>
+        </div>
+
+        <button type="submit" class="boton-contacto">Enviar</button>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <div class="contenedor-footer">
+        <!-- Columna 1 -->
+        <div class="footer-logo">
+          <a href="#">
+            <img src="assets/icons/logo-cafe-50.png" alt="Café Grano Urbano" />
+            <p>El Café Grano Urbano</p>
+          </a>
+          <p class="footer-texto-logo">
+            Tu lugar favorito para disfrutar del mejor café, postres artesanales
+            y un ambiente acogedor.
+          </p>
+        </div>
+
+        <!-- Columna 2 -->
+        <div class="footer-columna">
+          <h3>Enlaces</h3>
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3 -->
+        <div class="footer-columna">
+          <h3>Contactanos</h3>
+          <ul class="social-links">
+            <li>
+              <a href="#"
+                ><img src="assets/icons/twitter.png" alt="Twitter" /> Twitter
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="assets/icons/instagram-new.png" alt="Instagram" />
+                Instagram
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="assets/icons/whatsapp.png" alt="WhatsApp" /> WhatsApp
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-abajo">
+        <p>© 2025 El Café Grano Urbano – Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
   </body>
 </html>
